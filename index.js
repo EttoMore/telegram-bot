@@ -25,6 +25,7 @@ Comandi disponibili:
 /start - Avvia il bot
 /help - Mostra questo messaggio di aiuto
 /info - Informazioni sul bot
+/pitch - Mostra il pitch di FinanzApp
 `);
 });
 
@@ -35,6 +36,14 @@ bot.onText(/\/info/, (msg) => {
 Bot creato durante il corso di Containerizzazione e Deployment.
 Versione: 1.0.0
 Ambiente: ${process.env.NODE_ENV || 'development'}
+`);
+});
+
+// Gestisci il comando /pitch
+bot.onText(/\/pitch/, (msg) => {
+  const chatId = msg.chat.id;
+  bot.sendMessage(chatId, `
+Gestisci il tuo denaro in modo semplice e smart. FinanzApp è l’app mobile che ti aiuta a monitorare spese, impostare obiettivi di risparmio e avere sempre sotto controllo il tuo budget. In pochi tap, puoi visualizzare la tua situazione finanziaria, pianificare le tue finanze e prendere decisioni migliori. Perfetta per chi vuole più libertà, meno stress e il pieno controllo del proprio denaro — ovunque tu sia.
 `);
 });
 
