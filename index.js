@@ -54,7 +54,8 @@ bot.on('message', (msg) => {
   // Ignora i comandi che abbiamo già gestito
   if (msg.text && (msg.text.startsWith('/start') || 
                    msg.text.startsWith('/help') || 
-                   msg.text.startsWith('/info'))) {
+                   msg.text.startsWith('/info') ||
+                   msg.text.startsWith('/pitch'))) {
     return;
   }
   
